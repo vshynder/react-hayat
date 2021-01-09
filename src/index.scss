@@ -1,6 +1,9 @@
-@import './assets/fonts.css';
 @import './assets/variables.scss';
 @import './app.scss';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
