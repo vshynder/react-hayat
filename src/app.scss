@@ -1,5 +1,6 @@
 .container {
-  width: 380px;
+  width: 90%;
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -29,7 +30,29 @@
   }
   .header {
     &__tabs {
-      display: block;
+      display: flex;
+      align-items: center;
+
+      &--links {
+        &-link {
+          color: $default_black;
+          font-size: 14px;
+          text-decoration: none;
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+      &--userinfo {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin-left: 10px;
+        border-left: 1px solid #cbcbcb;
+        &-avatar {
+          fill: $default_light;
+        }
+      }
     }
     &__menu {
       display: none;
