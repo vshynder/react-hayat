@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Component, RefObject, useRef } from 'react';
 import {
   CarouselProvider,
   Slider as PureSlider,
   Slide,
   ButtonBack,
   ButtonNext,
+  DotGroup,
+  Dot,
+  CarouselProviderProps,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { IndividualSlide } from './components';
+import { SUPPLY_CASES } from '../../constants';
 
 const SLIDER_INTERVAL = 3000;
 
@@ -16,48 +21,32 @@ const Slider: React.FC<SliderProps> = ({}) => {
   return (
     <CarouselProvider
       className="slider container"
-      naturalSlideHeight={100}
+      naturalSlideHeight={20}
       naturalSlideWidth={100}
-      totalSlides={10}
+      totalSlides={3}
       infinite
       isPlaying={true}
       interval={SLIDER_INTERVAL}
     >
+      <Dot slide={0} className="slider__dot" />
+      <Dot slide={1} className="slider__dot" />
+      <Dot slide={2} className="slider__dot" />
       <PureSlider>
-        <Slide className="slider__slide" index={0}>
-          Slide 1
-        </Slide>
-        <Slide className="slider__slide" index={1}>
+        {SUPPLY_CASES.map((c, i) => {
+          return (
+            <Slide index={i} className="slider__slide">
+              <IndividualSlide text={c.text} />
+            </Slide>
+          );
+        })}
+
+        {/* <Slide className="slider__slide" index={1}>
           Slide 2
         </Slide>
         <Slide className="slider__slide" index={2}>
           Slide 3
-        </Slide>
-        <Slide className="slider__slide" index={3}>
-          Slide 4
-        </Slide>
-        <Slide className="slider__slide" index={4}>
-          Slide 5
-        </Slide>
-        <Slide className="slider__slide" index={5}>
-          Slide 6
-        </Slide>
-        <Slide className="slider__slide" index={6}>
-          Slide 7
-        </Slide>
-        <Slide className="slider__slide" index={7}>
-          Slide 8
-        </Slide>
-        <Slide className="slider__slide" index={8}>
-          Slide 9
-        </Slide>
-        <Slide className="slider__slide" index={9}>
-          Slide 10
-        </Slide>
+        </Slide> */}
       </PureSlider>
-
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
     </CarouselProvider>
   );
 };

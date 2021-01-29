@@ -31,8 +31,19 @@
 }
 
 .slider {
+  padding-top: 40px;
   &__slide {
     width: 100%;
+    background-color: red;
+  }
+  &__dot {
+    background-color: $default_light;
+    border: none;
+    width: 15px;
+    height: 2px;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
   }
 }
 

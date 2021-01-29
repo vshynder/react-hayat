@@ -13,7 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
     <div className="header__outer">
       <div className="container">
         <div className="header__inner">
-          <img onClick={() => history.push('/')} src={Logo} />
+          <img alt="logo" onClick={() => history.push('/')} src={Logo} />
           <NavLinks />
         </div>
       </div>
