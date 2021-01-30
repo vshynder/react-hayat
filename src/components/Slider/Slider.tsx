@@ -1,4 +1,4 @@
-import React, { Component, RefObject, useRef } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   CarouselProvider,
   Slider as PureSlider,
@@ -8,45 +8,43 @@ import {
   DotGroup,
   Dot,
   CarouselProviderProps,
+  CarouselContext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { IndividualSlide } from './components';
 import { SUPPLY_CASES } from '../../constants';
+import DecoratedComponent from './SliderContext';
+import { useDimensions } from '../../hooks';
 
 const SLIDER_INTERVAL = 3000;
 
-export interface SliderProps {}
-
-const Slider: React.FC<SliderProps> = ({}) => {
+const Slider: React.FC = ({}) => {
+  const { width } = useDimensions();
+  const [sliderHeight, setSliderHeight] = useState<number>(40);
+  useEffect(() => {
+    if (width > 576 && width <= 768) {
+      setSliderHeight(25);
+    } else if (width > 768 && width <= 992) {
+      setSliderHeight(15);
+    } else if (width > 992 && width <= 1200) {
+      setSliderHeight(18);
+    } else if (width > 1200) {
+      setSliderHeight(20);
+    } else {
+      setSliderHeight(40);
+    }
+  }, [width]);
   return (
     <CarouselProvider
       className="slider container"
-      naturalSlideHeight={20}
+      naturalSlideHeight={sliderHeight}
       naturalSlideWidth={100}
       totalSlides={3}
       infinite
       isPlaying={true}
       interval={SLIDER_INTERVAL}
     >
-      <Dot slide={0} className="slider__dot" />
-      <Dot slide={1} className="slider__dot" />
-      <Dot slide={2} className="slider__dot" />
-      <PureSlider>
-        {SUPPLY_CASES.map((c, i) => {
-          return (
-            <Slide index={i} className="slider__slide">
-              <IndividualSlide text={c.text} />
-            </Slide>
-          );
-        })}
-
-        {/* <Slide className="slider__slide" index={1}>
-          Slide 2
-        </Slide>
-        <Slide className="slider__slide" index={2}>
-          Slide 3
-        </Slide> */}
-      </PureSlider>
+      <DecoratedComponent />
     </CarouselProvider>
   );
 };
