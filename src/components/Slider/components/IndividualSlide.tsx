@@ -8,8 +8,12 @@ const IndividualSlide: React.FC<IndividualSlideProps> = ({ text }) => {
   return (
     <div>
       <div className="slider__slide--text">
-        {text.map((c) => {
-          return <p className="slider__slide--text--p">- {c}</p>;
+        {text.map((c, i) => {
+          return (
+            <p key={i} className="slider__slide--text--p">
+              - {c}
+            </p>
+          );
         })}
       </div>
     </div>

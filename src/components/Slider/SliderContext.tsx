@@ -30,6 +30,7 @@ class SliderContext extends React.Component<
         {SUPPLY_CASES.map((c, i) => {
           return (
             <Dot
+              key={i}
               slide={i}
               className={`
                     slider__dot
@@ -40,7 +41,7 @@ class SliderContext extends React.Component<
         <PureSlider>
           {SUPPLY_CASES.map((c, i) => {
             return (
-              <Slide index={i} className="slider__slide">
+              <Slide key={i} index={i} className="slider__slide">
                 <IndividualSlide text={c.text} />
               </Slide>
             );

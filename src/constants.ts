@@ -25,3 +25,22 @@ export const SUPPLY_CASES = [
     ],
   },
 ];
+
+export const WORK_WITH_US = [
+  {
+    image: 'homka.png',
+    name: 'Homka',
+  },
+  {
+    image: 'mcdonalds.png',
+    name: 'McDonalds',
+  },
+  {
+    image: 'pulp-mill-print.png',
+    name: 'PulpMillPrint',
+  },
+  {
+    image: 'tulchin.png',
+    name: 'Tulchin',
+  },
+];

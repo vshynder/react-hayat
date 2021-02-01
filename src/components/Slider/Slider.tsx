@@ -16,7 +16,7 @@ import { SUPPLY_CASES } from '../../constants';
 import DecoratedComponent from './SliderContext';
 import { useDimensions } from '../../hooks';
 
-const SLIDER_INTERVAL = 3000;
+export const SLIDER_INTERVAL = 3000;
 
 const Slider: React.FC = ({}) => {
   const { width } = useDimensions();
