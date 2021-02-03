@@ -25,8 +25,11 @@ const Step: React.FC<StepProps> = ({ step, text, buttons, index }) => {
         {buttons.map((b, i) => {
           return (
             <a
-              href="#"
-              rel="noreferrer"
+              // store files in the public folder
+              //TODO: change the file
+
+              href="/downloadFiles/1.pdf"
+              download
               key={i}
               className="supplier__card--button"
             >
