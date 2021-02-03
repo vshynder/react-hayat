@@ -1,5 +1,10 @@
 import React from 'react';
-import { ImageBlock, Slider, WorkWithUs } from '../../components';
+import {
+  ChangeSupplier,
+  ImageBlock,
+  Slider,
+  WorkWithUs,
+} from '../../components';
 
 export interface LandingPageProps {}
 
@@ -9,6 +14,7 @@ const LandingPage: React.FC<LandingPageProps> = ({}) => {
       <ImageBlock />
       <Slider />
       <WorkWithUs />
+      <ChangeSupplier />
     </div>
   );
 };
