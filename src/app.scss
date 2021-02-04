@@ -124,11 +124,7 @@
 }
 
 .supplier {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-
+  padding: 30px 0;
   &__title {
     font-size: 18px;
     text-transform: uppercase;
@@ -136,6 +132,13 @@
     align-self: flex-start;
     padding-bottom: 20px;
   }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__card {
     width: 225px;
     height: 370px;
@@ -149,8 +152,10 @@
 
     padding: 15px;
 
-    &:not(:last-of-type) {
-      margin-bottom: 40px;
+    &--outer {
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
     }
     &--cover {
       display: flex;
@@ -265,6 +270,23 @@
       font-size: 24px;
     }
   }
+  .supplier {
+    &__title {
+      font-size: 24px;
+    }
+    &__content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__card {
+      &--outer {
+        &:last-of-type {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -297,6 +319,31 @@
     &__title {
       top: 50px;
       right: 140px;
+    }
+  }
+  .supplier {
+    &__content {
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 7px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+    &__card {
+      min-width: 225px;
+      margin: 10px 10px 0;
+      &--outer {
+        &:last-of-type {
+          // margin: 10px 10px 40px;
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 }
@@ -380,6 +427,11 @@
     }
   }
   .partners {
+    &__title {
+      font-size: 36px;
+    }
+  }
+  .supplier {
     &__title {
       font-size: 36px;
     }

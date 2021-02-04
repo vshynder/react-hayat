@@ -50,19 +50,6 @@ const StepSvg: React.FC<StepSvgProps> = ({ step, color }) => {
     return (
       <svg
         className="supplier__card--svg"
-        width="50"
-        height="42"
-        viewBox="0 0 50 42"
-        fill={COLORS.dark}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M17.1605 41.1816L1.2716 23.2964C0.31702 22.2219 0.31702 20.4797 1.2716 19.4051L4.72848 15.5138C5.68306 14.4392 7.23089 14.4392 8.18546 15.5138L18.889 27.562L41.8147 1.75595C42.7693 0.681446 44.3172 0.681446 45.2717 1.75595L48.7286 5.64727C49.6832 6.72178 49.6832 8.46397 48.7286 9.53859L20.6175 41.1817C19.6628 42.2562 18.1151 42.2562 17.1605 41.1816Z" />
-      </svg>
-    );
-  } else if (step === 5) {
-    return (
-      <svg
-        className="supplier__card--svg"
         width="41"
         height="41"
         viewBox="0 0 41 41"
@@ -78,6 +65,19 @@ const StepSvg: React.FC<StepSvgProps> = ({ step, color }) => {
             <rect width="41" height="41" fill="white" />
           </clipPath>
         </defs>
+      </svg>
+    );
+  } else if (step === 5) {
+    return (
+      <svg
+        className="supplier__card--svg"
+        width="50"
+        height="42"
+        viewBox="0 0 50 42"
+        fill={COLORS.dark}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M17.1605 41.1816L1.2716 23.2964C0.31702 22.2219 0.31702 20.4797 1.2716 19.4051L4.72848 15.5138C5.68306 14.4392 7.23089 14.4392 8.18546 15.5138L18.889 27.562L41.8147 1.75595C42.7693 0.681446 44.3172 0.681446 45.2717 1.75595L48.7286 5.64727C49.6832 6.72178 49.6832 8.46397 48.7286 9.53859L20.6175 41.1817C19.6628 42.2562 18.1151 42.2562 17.1605 41.1816Z" />
       </svg>
     );
   } else {
