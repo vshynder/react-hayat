@@ -203,6 +203,95 @@
   }
 }
 
+.tarif {
+  &__title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  &__content {
+    &--name {
+      padding: 20px 0;
+      font-size: 18px;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+  &__formula {
+    &--block {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      &-inner {
+        position: relative;
+      }
+      &--card {
+        background-color: $default_light;
+        width: 250px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        margin-left: 105px;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          transform: translateX(-100%);
+          top: 0;
+          left: 0;
+
+          border-top: 35px solid transparent;
+          border-bottom: 35px solid transparent;
+          border-right: 15px solid $default_light;
+        }
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          transform: translateX(100%);
+          top: 0;
+          right: 0;
+
+          border-top: 35px solid transparent;
+          border-bottom: 35px solid transparent;
+          border-left: 15px solid $default_light;
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+        &--subtext {
+          font-size: 12px;
+          margin-left: 120px;
+          &:first-of-type {
+            margin-top: 40px;
+          }
+        }
+        &--gear {
+          width: 50%;
+          margin-left: 20px;
+        }
+        &--title {
+          font-size: 18px;
+          font-weight: normal;
+        }
+        &--text {
+          font-size: 12px;
+        }
+      }
+      &--lamp {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
@@ -285,6 +374,11 @@
           margin: 0 auto;
         }
       }
+    }
+  }
+  .tarif {
+    &__title {
+      font-size: 24px;
     }
   }
 }

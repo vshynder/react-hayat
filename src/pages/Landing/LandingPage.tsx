@@ -3,6 +3,7 @@ import {
   ChangeSupplier,
   ImageBlock,
   Slider,
+  TarifParts,
   WorkWithUs,
 } from '../../components';
 
@@ -15,6 +16,7 @@ const LandingPage: React.FC<LandingPageProps> = ({}) => {
       <Slider />
       <WorkWithUs />
       <ChangeSupplier />
+      <TarifParts />
     </div>
   );
 };
