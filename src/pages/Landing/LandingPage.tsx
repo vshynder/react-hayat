@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   ChangeSupplier,
+  Contacts,
   ImageBlock,
   Slider,
   TarifParts,
@@ -17,6 +18,7 @@ const LandingPage: React.FC<LandingPageProps> = ({}) => {
       <WorkWithUs />
       <ChangeSupplier />
       <TarifParts />
+      <Contacts />
     </div>
   );
 };

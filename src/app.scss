@@ -1,5 +1,5 @@
 .container {
-  width: 380px;
+  width: 370px;
   margin: 0 auto;
 }
 
@@ -285,10 +285,39 @@
       &--lamp {
         position: absolute;
         top: -5px;
-        left: 0;
+        left: -25px;
         z-index: 1;
       }
     }
+  }
+}
+
+.contacts {
+  background-color: $default_black;
+  &__inner {
+    color: white;
+    padding: 20px 0;
+  }
+  &__map {
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  background-color: $default_black;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 60px;
+  }
+  &__left {
+    font-size: 16px;
+  }
+  &__right {
+    font-size: 12px;
   }
 }
 
@@ -381,6 +410,11 @@
       font-size: 24px;
     }
   }
+  .footer {
+    &__right {
+      font-size: 14px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -440,6 +474,11 @@
       }
     }
   }
+  .footer {
+    &__left {
+      font-size: 18px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -474,6 +513,26 @@
     }
     &__title {
       right: 280px;
+    }
+  }
+  .tarif {
+    &__formula {
+      display: flex;
+      justify-content: space-between;
+      &--block {
+        align-items: center;
+        &:nth-of-type(3) {
+          width: 400px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__left {
+      font-size: 24px;
+    }
+    &__right {
+      font-size: 18px;
     }
   }
 }
@@ -528,6 +587,15 @@
   .supplier {
     &__title {
       font-size: 36px;
+    }
+  }
+  .tarif {
+    &__title {
+      font-size: 36px;
+    }
+    &__content {
+      width: 80%;
+      margin: 0 auto;
     }
   }
 }
