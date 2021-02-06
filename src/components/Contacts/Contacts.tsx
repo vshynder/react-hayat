@@ -16,6 +16,26 @@ const Contacts: React.FC<ContactsProps> = () => {
               height="100%"
             ></iframe>
           </div>
+          <div className="contacts__content">
+            <p className="contacts__content--text">
+              м. Київ, вул. Хохлових Сім’ї, буд.8. офіс 9
+            </p>
+            <p className="contacts__content--text">
+              Режим роботи:{' '}
+              <span className="contacts__content--text--span">
+                понеділок-п'ятниця 08:00 - 18:00
+              </span>
+            </p>
+            <p className="contacts__content--text">
+              тел. 097 000 00 92{' '}
+              <span className="contacts__content--text--span">
+                email: info.htst@gmail.com
+              </span>
+            </p>
+            <p className="contacts__content--text">
+              Відповідальна особа - Директор Фененко Поліна Олександрівна
+            </p>
+          </div>
         </div>
       </div>
     </div>

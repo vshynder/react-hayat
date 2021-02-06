@@ -302,6 +302,15 @@
     height: 300px;
     margin: 0 auto;
   }
+  &__content {
+    padding: 10px 0;
+    &--text {
+      margin: 10px 0;
+      &--span {
+        display: block;
+      }
+    }
+  }
 }
 
 .footer {
@@ -474,6 +483,24 @@
       }
     }
   }
+  .contacts {
+    &__inner {
+      display: flex;
+    }
+    &__map {
+      width: 350px;
+    }
+    &__content {
+      text-align: right;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &--text {
+        margin: 0;
+      }
+    }
+  }
   .footer {
     &__left {
       font-size: 18px;
@@ -596,6 +623,11 @@
     &__content {
       width: 80%;
       margin: 0 auto;
+    }
+  }
+  .contacts {
+    &__map {
+      width: 700px;
     }
   }
 }

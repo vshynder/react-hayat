@@ -8,9 +8,7 @@ import {
   WorkWithUs,
 } from '../../components';
 
-export interface LandingPageProps {}
-
-const LandingPage: React.FC<LandingPageProps> = ({}) => {
+const LandingPage: React.FC = () => {
   return (
     <div className="landing">
       <ImageBlock />
