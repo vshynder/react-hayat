@@ -7,3 +7,4 @@ export { default as ChangeSupplier } from './ChangeSupplier';
 export { default as TarifParts } from './TarifParts';
 export { default as Contacts } from './Contacts';
 export { default as Footer } from './Footer';
+export { default as InfoCard } from './InfoCard';
