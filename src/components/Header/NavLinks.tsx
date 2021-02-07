@@ -8,6 +8,9 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
     <div>
       <div className="header__tabs">
         <div className="header__tabs--links">
+          <NavLink className="header__tabs--links-link" to="/faq">
+            FaQ's
+          </NavLink>
           <NavLink className="header__tabs--links-link" to="/infocenter">
             ІНФО ЦЕНТР
           </NavLink>
