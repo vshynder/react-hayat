@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Settings from './Settings';
 import UserInfoModal from './UserInfoModal';
 
 export interface NavLinksProps {}
 
 const NavLinks: React.FC<NavLinksProps> = ({}) => {
   const [showModal, setShowModal] = useState(false);
+  const [left, setLeft] = useState(1000);
   const toggleModal = () => setShowModal((p) => !p);
   return (
     <div>
@@ -37,7 +39,7 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
           </svg>
         </div>
       </div>
-      <div className="header__menu">
+      <div onClick={() => setLeft(0)} className="header__menu">
         <svg
           width="22"
           height="19"
@@ -52,6 +54,7 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
         </svg>
       </div>
       <UserInfoModal isShown={showModal} toggleModal={toggleModal} />
+      <Settings left={left} setLeft={setLeft} />
     </div>
   );
 };
