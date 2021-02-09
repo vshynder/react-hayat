@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import UserInfoModal from './UserInfoModal';
 
 export interface NavLinksProps {}
 
 const NavLinks: React.FC<NavLinksProps> = ({}) => {
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = () => setShowModal((p) => !p);
   return (
     <div>
       <div className="header__tabs">
@@ -14,12 +17,12 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
           <NavLink className="header__tabs--links-link" to="/infocenter">
             ІНФО ЦЕНТР
           </NavLink>
-          <NavLink className="header__tabs--links-link" to="/energyonline">
+          <NavLink className="header__tabs--links-link" to="/">
             ENERGY ONLINE
           </NavLink>
         </div>
 
-        <div className="header__tabs--userinfo">
+        <div onClick={toggleModal} className="header__tabs--userinfo">
           <svg
             width="22"
             height="24"
@@ -48,6 +51,7 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
           />
         </svg>
       </div>
+      <UserInfoModal isShown={showModal} toggleModal={toggleModal} />
     </div>
   );
 };

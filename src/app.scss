@@ -348,6 +348,7 @@
     &--title {
       font-size: 18px;
       font-weight: normal;
+      text-transform: uppercase;
     }
     &--icon {
       margin: 10px 0;
@@ -371,6 +372,29 @@
     &:not(:last-of-type) {
       margin-bottom: 40px;
     }
+  }
+}
+
+.userinfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  &__modal {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
   }
 }
 
