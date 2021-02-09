@@ -54,7 +54,7 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
         </svg>
       </div>
       <UserInfoModal isShown={showModal} toggleModal={toggleModal} />
-      <Settings left={left} setLeft={setLeft} />
+      <Settings toggleModal={toggleModal} left={left} setLeft={setLeft} />
     </div>
   );
 };
