@@ -7,12 +7,15 @@ export interface NavLinksProps {}
 
 const NavLinks: React.FC<NavLinksProps> = ({}) => {
   const [showModal, setShowModal] = useState(false);
-  const [left, setLeft] = useState(1000);
+  const [left, setLeft] = useState(10000);
   const toggleModal = () => setShowModal((p) => !p);
   return (
     <div>
       <div className="header__tabs">
         <div className="header__tabs--links">
+          <NavLink className="header__tabs--links-link" to="/">
+            ГОЛОВНА
+          </NavLink>
           <NavLink className="header__tabs--links-link" to="/faq">
             FaQ's
           </NavLink>

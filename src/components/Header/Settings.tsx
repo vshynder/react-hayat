@@ -8,7 +8,7 @@ export interface SettingsProps {
 }
 
 const Settings: React.FC<SettingsProps> = ({ left, setLeft, toggleModal }) => {
-  const closeModal = () => setLeft(1000);
+  const closeModal = () => setLeft(10000);
   return (
     <div className="settings" style={{ left }}>
       <div className="container">
@@ -26,6 +26,9 @@ const Settings: React.FC<SettingsProps> = ({ left, setLeft, toggleModal }) => {
         </div>
         <div onClick={closeModal} className="settings__content">
           <div className="settings__content--links">
+            <NavLink className="settings__content--link" to="/">
+              ГОЛОВНА
+            </NavLink>
             <NavLink className="settings__content--link" to="/faq">
               FaQ's
             </NavLink>
