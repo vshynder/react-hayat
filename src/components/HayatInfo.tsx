@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface HayatInfoProps {}
 
-const HayatInfo: React.FC<HayatInfoProps> = ({}) => {
+const HayatInfo: React.FC<HayatInfoProps> = () => {
   return (
     <>
       <div className="hayatblock">

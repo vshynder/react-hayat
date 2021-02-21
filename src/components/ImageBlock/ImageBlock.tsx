@@ -3,7 +3,7 @@ import HayatInfo from '../HayatInfo';
 
 export interface ImageBlockProps {}
 
-const ImageBlock: React.FC<ImageBlockProps> = ({}) => {
+const ImageBlock: React.FC<ImageBlockProps> = () => {
   return (
     <div className="imageblock">
       <div className="container">

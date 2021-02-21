@@ -3,7 +3,7 @@ import LogoSlider from './LogoSlider';
 
 export interface WorkWithUsProps {}
 
-const WorkWithUs: React.FC<WorkWithUsProps> = ({}) => {
+const WorkWithUs: React.FC<WorkWithUsProps> = () => {
   return (
     <div className="partners container">
       <p className="partners__title">З нами працюють:</p>

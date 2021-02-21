@@ -1,24 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import {
-  CarouselProvider,
-  Slider as PureSlider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-  DotGroup,
-  Dot,
-  CarouselProviderProps,
-  CarouselContext,
-} from 'pure-react-carousel';
+import React, { useEffect, useState } from 'react';
+import { CarouselProvider } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { IndividualSlide } from './components';
-import { SUPPLY_CASES } from '../../constants';
 import DecoratedComponent from './SliderContext';
 import { useDimensions } from '../../hooks';
 
 export const SLIDER_INTERVAL = 3000;
 
-const Slider: React.FC = ({}) => {
+const Slider: React.FC = () => {
   const { width } = useDimensions();
   const [sliderHeight, setSliderHeight] = useState<number>(40);
   useEffect(() => {

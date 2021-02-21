@@ -4,7 +4,7 @@ import Step from './Step';
 
 export interface ChangeSupplierProps {}
 
-const ChangeSupplier: React.FC<ChangeSupplierProps> = ({}) => {
+const ChangeSupplier: React.FC<ChangeSupplierProps> = () => {
   return (
     <div className="supplier container">
       <h2 className="supplier__title">Як змінити постачальника:</h2>

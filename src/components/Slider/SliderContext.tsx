@@ -26,7 +26,7 @@ class SliderContext extends React.Component<
     return (
       <>
         <Svg color={COLORS.yellow} />
-        <span className="slider__title">КЛЮЧОВІ УМОВИ ПОСТАЧАННЯ</span>
+        <div className="slider__title">КЛЮЧОВІ УМОВИ ПОСТАЧАННЯ</div>
         {SUPPLY_CASES.map((c, i) => {
           return (
             <Dot

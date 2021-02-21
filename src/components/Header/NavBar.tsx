@@ -7,7 +7,7 @@ import Logo from '../../assets/logo.png';
 
 export interface NavBarProps {}
 
-const NavBar: React.FC<NavBarProps> = ({}) => {
+const NavBar: React.FC<NavBarProps> = () => {
   const history = useHistory();
   return (
     <div className="header__outer">

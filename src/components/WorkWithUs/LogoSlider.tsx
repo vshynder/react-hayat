@@ -6,6 +6,10 @@ import Homka from '../../assets/partners/homka.png';
 import McDonalds from '../../assets/partners/mcdonalds.png';
 import PulpMillPrint from '../../assets/partners/pulp-mill-print.png';
 import Tulchin from '../../assets/partners/tulchin.png';
+import Square from '../../assets/partners/square.jpg';
+import UFC from '../../assets/partners/ufc.jpg';
+import CPI from '../../assets/partners/cpi.jpg';
+import Fregat from '../../assets/partners/fregat.jpg';
 import { useDimensions } from '../../hooks';
 
 export interface LogoSliderProps {}
@@ -20,14 +24,23 @@ const chooseImage = (name: string) => {
       return PulpMillPrint;
     case 'Tulchin':
       return Tulchin;
+    case 'Square':
+      return Square;
+    case 'UFC':
+      return UFC;
+    case 'CPI':
+      return CPI;
+    case 'Fregat':
+      return Fregat;
     default:
       return '';
   }
 };
 
-const LogoSlider: React.FC<LogoSliderProps> = ({}) => {
+const LogoSlider: React.FC<LogoSliderProps> = () => {
   const { width } = useDimensions();
   const [visibleSlides, setVisibleSlides] = useState<number>(3);
+
   useEffect(() => {
     if (width > 768 && width <= 992) {
       setVisibleSlides(4);

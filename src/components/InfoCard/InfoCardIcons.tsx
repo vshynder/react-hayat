@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { COLORS } from '../../constants';
 
 export interface InfoCardIconsProps {

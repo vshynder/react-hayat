@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Settings from './Settings';
 import UserInfoModal from './UserInfoModal';
 
 export interface NavLinksProps {}
 
-const NavLinks: React.FC<NavLinksProps> = ({}) => {
+const NavLinks: React.FC<NavLinksProps> = () => {
   const [showModal, setShowModal] = useState(false);
   const [left, setLeft] = useState(10000);
   const toggleModal = () => setShowModal((p) => !p);

@@ -24,12 +24,10 @@ const Step: React.FC<StepProps> = ({ step, text, buttons, index }) => {
         </div>
         <div className="supplier__card--buttons">
           {buttons.map((b, i) => {
+            const fileLink = `/downloadFiles/${b.file}`;
             return (
               <a
-                // store files in the public folder
-                //TODO: change the file
-
-                href="/downloadFiles/1.pdf"
+                href={fileLink}
                 download
                 key={i}
                 className="supplier__card--button"

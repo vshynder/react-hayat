@@ -3,7 +3,7 @@ import { COLORS } from '../../constants';
 
 export interface TarifPartsProps {}
 
-const TarifParts: React.FC<TarifPartsProps> = ({}) => {
+const TarifParts: React.FC<TarifPartsProps> = () => {
   return (
     <div className="tarif container">
       <h2 className="tarif__title">Складові тарифу розподілу:</h2>
