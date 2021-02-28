@@ -4,7 +4,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import DecoratedComponent from './SliderContext';
 import { useDimensions } from '../../hooks';
 
-export const SLIDER_INTERVAL = 3000;
+export const SLIDER_INTERVAL = 15000;
 
 const Slider: React.FC = () => {
   const { width } = useDimensions();
