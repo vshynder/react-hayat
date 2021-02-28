@@ -3,6 +3,9 @@
   width: 370px;
   margin: 0 auto;
 }
+.boldtext {
+  font-weight: bold;
+}
 
 .header {
   &__outer {
@@ -37,6 +40,7 @@
   position: relative;
   &__slide {
     width: 100%;
+
     &--svg {
       position: absolute;
       top: 30px;
@@ -45,6 +49,7 @@
     &--text {
       font-size: 14px;
       padding-top: 20px;
+
       &--p {
         padding: 0;
         margin: 0;
@@ -470,6 +475,10 @@
         white-space: pre-wrap;
       }
     }
+    &--more {
+      text-align: center;
+      color: #cbcbcb;
+    }
   }
 }
 
@@ -625,17 +634,18 @@
   }
   .supplier {
     &__content {
-      flex-wrap: nowrap;
-      overflow-y: hidden;
-      overflow-x: scroll;
-      &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        height: 7px;
-      }
-      &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+      padding: 0 40px;
+      // flex-wrap: nowrap;
+      // overflow-y: hidden;
+      // overflow-x: scroll;
+      // &::-webkit-scrollbar {
+      //   -webkit-appearance: none;
+      //   height: 7px;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   border-radius: 10px;
+      //   background-color: rgba(0, 0, 0, 0.3);
+      // }
     }
     &__card {
       min-width: 225px;
@@ -746,6 +756,20 @@
       }
     }
   }
+  .supplier {
+    &__content {
+      padding: 0 80px;
+      justify-content: center;
+    }
+    &__card {
+      &--outer {
+        &:last-of-type {
+          margin: 0;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -753,10 +777,10 @@
     width: 1140px;
   }
   .imageblock {
-    height: 540px;
+    height: 320px;
   }
   .hayatblock {
-    top: 210px;
+    top: 50px;
     width: 670px;
     height: 380px;
     padding: 140px 0 0 20px;
@@ -773,7 +797,7 @@
     height: 325px;
   }
   .slider {
-    padding-top: 150px;
+    padding-top: 130px;
     &__slide {
       &--text {
         font-size: 24px;
@@ -798,6 +822,16 @@
   .supplier {
     &__title {
       font-size: 36px;
+    }
+    &__content {
+      flex-wrap: nowrap;
+    }
+    &__card {
+      &--outer {
+        width: 230px;
+      }
+      min-width: 210px;
+      width: 210px;
     }
   }
   .tarif {

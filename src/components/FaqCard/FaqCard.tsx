@@ -16,6 +16,7 @@ const FaqCard: React.FC<FaqCardProps> = ({ question, answer }) => {
       >
         {answer}
       </div>
+      <div className="faq__card--more">Детальнiше...</div>
     </div>
   );
 };

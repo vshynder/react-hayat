@@ -39,13 +39,58 @@ class SliderContext extends React.Component<
           );
         })}
         <PureSlider>
-          {SUPPLY_CASES.map((c, i) => {
-            return (
-              <Slide key={i} index={i} className="slider__slide">
-                <IndividualSlide text={c.text} />
-              </Slide>
-            );
-          })}
+          <Slide index={0} className="slider__slide">
+            <div className="slider__slide--text">
+              <p className="slider__slide--text--p">
+                - <span className="boldtext">Прозорий розрахунок</span>{' '}
+                собівартості тарифу відповідно до графіку споживання та ціни{' '}
+                <span className="boldtext">ДП "Оператор ринку"</span>
+              </p>
+              <p className="slider__slide--text--p">
+                - <span className="boldtext">Мінімальний</span> тариф
+                постачальника
+              </p>
+              <p className="slider__slide--text--p">
+                - Авансовий платіж{' '}
+                <span className="boldtext">
+                  без застосування коефіцієнту витрат постачальника
+                </span>
+              </p>
+            </div>
+          </Slide>
+          <Slide index={1} className="slider__slide">
+            <div className="slider__slide--text">
+              <p className="slider__slide--text--p">
+                - Зручний, узгоджений зі Споживачем графік{' '}
+                <span className="boldtext">авансових платежів</span>
+              </p>
+              <p className="slider__slide--text--p">
+                - Можливість оплати{' '}
+                <span className="boldtext">по факту декади /місяця</span>{' '}
+                постачання
+              </p>
+              <p className="slider__slide--text--p">
+                - Можливість <span className="boldtext">відтермінування</span>{' '}
+                платежів
+              </p>
+            </div>
+          </Slide>
+          <Slide index={2} className="slider__slide">
+            <div className="slider__slide--text">
+              <p className="slider__slide--text--p">
+                - <span className="boldtext">Повне</span> покриття небалансу
+                споживання електроенергії
+              </p>
+              <p className="slider__slide--text--p">
+                - <span className="boldtext">Відсутність лімітів</span>{' '}
+                споживання електроенергії
+              </p>
+              <p className="slider__slide--text--p">
+                - <span className="boldtext">Відсутність штрафів</span> за
+                відхилення від замовлених обсягів споживання
+              </p>
+            </div>
+          </Slide>
         </PureSlider>
       </>
     );
